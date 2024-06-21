@@ -1,1 +1,1 @@
-"# Search-Anime-Filler" 
+"Search Anime Filler Episode" is a user-friendly website designed to help anime fans quickly identify and locate filler episodes within their favorite series. Featuring a sleek, modern interface, users can effortlessly search for specific anime titles, view detailed lists of filler episodes, and navigate through categorized sections such as Anime Fillers, Manga Canon, and Mixed Canon Fillers.
