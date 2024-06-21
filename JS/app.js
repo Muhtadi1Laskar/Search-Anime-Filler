@@ -1,6 +1,4 @@
-import {
-    options
-} from "./optionsData.js";
+import { options } from "./optionsData.js";
 
 const input = document.getElementById("myInput");
 const ul = document.getElementById("myDropdown");
@@ -26,15 +24,31 @@ const renderOptions = () => {
 }
 
 const renderHTML = (value) => {
+    showSpinner();
     getAnimeData(value).then(res => {
         console.log(res);
+
         renderCards(res['Anime-Filler'], animeFillerCard);
         renderCards(res['Manga-Cannon'], mangaCannonCard);
         renderCards(res['Mixed-Cannon-Filler'], mixedCannonCard);
         renderTableData(res['Filler Episodes']);
+
+        outputCards.style.display = 'flex';
+        outputTable.style.display = 'block';
     });
-    outputCards.style.display = 'flex';
-    outputTable.style.display = 'block';
+}
+
+const showSpinner = () => {
+    animeFillerCard.innerHTML = spinnerHTML();
+    mangaCannonCard.innerHTML = spinnerHTML();
+    mixedCannonCard.innerHTML = spinnerHTML();
+    table.innerHTML = spinnerHTML();
+}
+
+const spinnerHTML = () => {
+    return `<div class="spinner-border text-primary" role="status" id="spinner">
+        <span class="visually-hidden">Loading...</span>
+    </div>`
 }
 
 const renderCards = (value, htmlTag) => {
