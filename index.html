@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anime Filler List</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Stylesheets/main.css">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="container mt-5">
+                <h2>Search Anime Filler</h2>
+                <p>Click on the button to open the dropdown menu, and use the input field to search for a specific
+                    Anime.</p>
+
+                <div class="mb-4">
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Select Anime
+                        </button>
+                        <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton" id="myDropdown">
+                            <input class="form-control" type="text" placeholder="Search.." id="myInput">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row filler-section" id="output-row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Anime Fillers
+                        </div>
+                        <div class="card-body" id="anime-filler-card">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Manga Canon
+                        </div>
+                        <div class="card-body" id="manga-cannon-card">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Mixed Canon Fillers
+                        </div>
+                        <div class="card-body" id="mixed-cannon-card">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Filler Episode Names</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table">
+                        <!-- More rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="module" src="JS/optionsData.js"></script>
+        <script type="module" src="JS/app.js"></script>
+    </body>
+
+</html>
