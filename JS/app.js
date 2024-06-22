@@ -9,6 +9,7 @@ const mixedCannonCard = document.getElementById('mixed-cannon-card');
 const table = document.getElementById('table');
 const outputCards = document.querySelector('.filler-section');
 const outputTable = document.querySelector('.table-responsive');
+const animeDescription = document.getElementById('anime-description');
 
 
 const renderOptions = () => {
@@ -26,8 +27,7 @@ const renderOptions = () => {
 const renderHTML = (value) => {
     showSpinner();
     getAnimeData(value).then(res => {
-        console.log(res['Anime Description']);
-
+        renderAnimeDescription(res['Anime Description'])
         renderCards(res['Anime-Filler'], animeFillerCard);
         renderCards(res['Manga-Cannon'], mangaCannonCard);
         renderCards(res['Mixed-Cannon-Filler'], mixedCannonCard);
@@ -38,7 +38,12 @@ const renderHTML = (value) => {
     });
 }
 
+const renderAnimeDescription = (description) => {
+    animeDescription.innerText = `${description}`
+}
+
 const showSpinner = () => {
+    animeDescription.innerHTML = spinnerHTML();
     animeFillerCard.innerHTML = spinnerHTML();
     mangaCannonCard.innerHTML = spinnerHTML();
     mixedCannonCard.innerHTML = spinnerHTML();
@@ -59,7 +64,7 @@ const renderCards = (value, htmlTag) => {
 
 const renderTableData = (value) => {
     table.innerHTML = value.length === 0 ?
-        `<tr><h3>There are no filler episode in this anime</h3></tr>` :
+        `<tr><h4>There are no filler episode in this anime</h4></tr>` :
         value.map((elem, index) => `<tr><td>${index+1}</td><td>${elem}</td></tr>`).join('');
 }
 
