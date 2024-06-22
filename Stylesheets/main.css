@@ -72,6 +72,13 @@ button {
     background-color: aliceblue;
 }
 
+#dropdownMenuButtons {
+    width: 10rem;
+    color: #007bff;
+    border-color: #007bff;
+    background-color: aliceblue;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
