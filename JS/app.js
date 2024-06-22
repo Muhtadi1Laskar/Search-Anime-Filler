@@ -26,7 +26,7 @@ const renderOptions = () => {
 const renderHTML = (value) => {
     showSpinner();
     getAnimeData(value).then(res => {
-        console.log(res);
+        console.log(res['Anime Description']);
 
         renderCards(res['Anime-Filler'], animeFillerCard);
         renderCards(res['Manga-Cannon'], mangaCannonCard);
