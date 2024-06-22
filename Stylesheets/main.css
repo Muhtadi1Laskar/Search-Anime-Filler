@@ -65,6 +65,11 @@ button {
     height: 34px;
 }
 
+#button-area {
+    display: flex;
+    flex-direction: row;
+}
+
 #dropdownMenuButton {
     width: 10rem;
     color: #007bff;
@@ -72,7 +77,7 @@ button {
     background-color: aliceblue;
 }
 
-#dropdownMenuButtons {
+#dropdownMenuButtons, #modal-close-btn {
     width: 10rem;
     color: #007bff;
     border-color: #007bff;
@@ -98,6 +103,11 @@ button {
     .card {
         margin: 10px;
     }
+    #button-area {
+        display: flex;
+        flex-direction: column;
+    }
+    
   }
 
 
